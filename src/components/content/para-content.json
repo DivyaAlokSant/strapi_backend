@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_para_contents",
+  "info": {
+    "displayName": "paraContent",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

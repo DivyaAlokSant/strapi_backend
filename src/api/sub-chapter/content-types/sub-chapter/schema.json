@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_chapters",
+  "info": {
+    "singularName": "sub-chapter",
+    "pluralName": "sub-chapters",
+    "displayName": "subChapter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "subChapterName": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "subChapterOrder": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "dynamicContent": {
+      "type": "dynamiczone",
+      "components": [
+        "content.table",
+        "content.para-content",
+        "content.chart-as-image"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "chapter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chapter.chapter",
+      "inversedBy": "sub_chapters"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "subChapterName",
+      "required": true
+    }
+  }
+}

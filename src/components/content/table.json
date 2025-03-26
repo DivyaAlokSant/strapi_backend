@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_content_tables",
+  "info": {
+    "displayName": "table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "tableHeader": {
+      "type": "string"
+    },
+    "tableData": {
+      "type": "json"
+    },
+    "tableFooter": {
+      "type": "blocks"
+    }
+  }
+}
