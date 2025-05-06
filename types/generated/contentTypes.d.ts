@@ -573,7 +573,7 @@ export interface ApiReportReport extends Struct.CollectionTypeSchema {
     year: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<2025>;
@@ -591,6 +591,12 @@ export interface ApiReportReport extends Struct.CollectionTypeSchema {
       }>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     chapters: Schema.Attribute.Relation<'oneToMany', 'api::chapter.chapter'>;
+    Tags: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -634,7 +640,16 @@ export interface ApiSubChapterSubChapter extends Struct.CollectionTypeSchema {
         };
       }>;
     dynamicContent: Schema.Attribute.DynamicZone<
-      ['content.table', 'content.para-content', 'content.chart-as-image']
+      [
+        'content.table',
+        'content.para-content',
+        'content.chart-as-image',
+        'content.bar-chart',
+        'content.line-chart',
+        'content.combo-bar-line-chart',
+        'content.pie-chart',
+        'content.stack-bar-chart',
+      ]
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

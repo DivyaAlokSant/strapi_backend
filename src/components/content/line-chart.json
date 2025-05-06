@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_content_line_charts",
+  "info": {
+    "displayName": "LineChart",
+    "icon": "slideshow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "chartTitle": {
+      "type": "string"
+    },
+    "xkey": {
+      "type": "string"
+    },
+    "chartData": {
+      "type": "json",
+      "required": true
+    },
+    "TooltipEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "LegendEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "lineColors": {
+      "type": "json"
+    },
+    "chartFooter": {
+      "type": "blocks"
+    }
+  }
+}

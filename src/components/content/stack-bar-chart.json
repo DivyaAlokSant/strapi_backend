@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_content_stack_bar_charts",
+  "info": {
+    "displayName": "StackBarChart",
+    "icon": "slideshow"
+  },
+  "options": {},
+  "attributes": {
+    "chartTitle": {
+      "type": "string"
+    },
+    "xkey": {
+      "type": "string"
+    },
+    "chartData": {
+      "type": "json"
+    },
+    "barColors": {
+      "type": "json"
+    },
+    "tooltipEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "legendEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "chartFooter": {
+      "type": "blocks"
+    }
+  }
+}

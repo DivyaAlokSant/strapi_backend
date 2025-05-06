@@ -38,7 +38,12 @@
       "components": [
         "content.table",
         "content.para-content",
-        "content.chart-as-image"
+        "content.chart-as-image",
+        "content.bar-chart",
+        "content.line-chart",
+        "content.combo-bar-line-chart",
+        "content.pie-chart",
+        "content.stack-bar-chart"
       ],
       "pluginOptions": {
         "i18n": {

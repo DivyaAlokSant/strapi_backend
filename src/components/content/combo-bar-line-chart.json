@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_content_combo_bar_line_charts",
+  "info": {
+    "displayName": "ComboBarLineChart",
+    "icon": "slideshow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "chartTitle": {
+      "type": "string",
+      "required": false
+    },
+    "xkey": {
+      "type": "string"
+    },
+    "barChartData": {
+      "type": "json",
+      "required": false
+    },
+    "lineChartData": {
+      "type": "json",
+      "required": false
+    },
+    "barColors": {
+      "type": "json"
+    },
+    "lineColors": {
+      "type": "json"
+    },
+    "tooltipEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "legendEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "chartFooter": {
+      "type": "blocks"
+    }
+  }
+}

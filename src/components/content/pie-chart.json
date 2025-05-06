@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_content_pie_charts",
+  "info": {
+    "displayName": "PieChart",
+    "icon": "chartCircle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "chartTitle": {
+      "type": "string"
+    },
+    "pieChartData": {
+      "type": "json",
+      "required": true
+    },
+    "pieColors": {
+      "type": "json"
+    },
+    "tooltipEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "legendEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "chartFooter": {
+      "type": "blocks"
+    }
+  }
+}

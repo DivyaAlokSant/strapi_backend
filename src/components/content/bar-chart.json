@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_content_bar_charts",
+  "info": {
+    "displayName": "BarChart",
+    "icon": "slideshow",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "Xkey": {
+      "type": "string"
+    },
+    "chartData": {
+      "type": "json"
+    },
+    "TooltipEnabled": {
+      "type": "boolean"
+    },
+    "LegendEnables": {
+      "type": "boolean"
+    },
+    "barColors": {
+      "type": "json"
+    },
+    "chartFooter": {
+      "type": "blocks"
+    }
+  }
+}

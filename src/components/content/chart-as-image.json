@@ -1,8 +1,9 @@
 {
   "collectionName": "components_content_chart_as_images",
   "info": {
-    "displayName": "chartAsImage",
-    "description": ""
+    "displayName": "dataImage",
+    "description": "",
+    "icon": "landscape"
   },
   "options": {},
   "attributes": {

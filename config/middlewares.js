@@ -1,6 +1,7 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
+  { resolve: './src/middlewares/rate-limit' },
   'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
