@@ -55,6 +55,7 @@ export interface ContentParaContent extends Struct.ComponentSchema {
   info: {
     displayName: 'paraContent';
     icon: 'file';
+    description: '';
   };
   attributes: {
     text: Schema.Attribute.Blocks;

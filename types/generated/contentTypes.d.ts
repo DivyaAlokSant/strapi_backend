@@ -673,6 +673,34 @@ export interface ApiSubChapterSubChapter extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVisitorCountVisitorCount
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'visitor_counts';
+  info: {
+    singularName: 'visitor-count';
+    pluralName: 'visitor-counts';
+    displayName: 'visitorCount';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    count: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::visitor-count.visitor-count'
+    >;
+  };
+}
+
 export interface AdminPermission extends Struct.CollectionTypeSchema {
   collectionName: 'admin_permissions';
   info: {
@@ -1051,6 +1079,7 @@ declare module '@strapi/strapi' {
       'api::chapter.chapter': ApiChapterChapter;
       'api::report.report': ApiReportReport;
       'api::sub-chapter.sub-chapter': ApiSubChapterSubChapter;
+      'api::visitor-count.visitor-count': ApiVisitorCountVisitorCount;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
       'admin::role': AdminRole;

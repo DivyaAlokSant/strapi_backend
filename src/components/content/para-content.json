@@ -2,7 +2,8 @@
   "collectionName": "components_content_para_contents",
   "info": {
     "displayName": "paraContent",
-    "icon": "file"
+    "icon": "file",
+    "description": ""
   },
   "options": {},
   "attributes": {
