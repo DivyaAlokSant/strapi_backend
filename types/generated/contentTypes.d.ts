@@ -547,6 +547,36 @@ export interface ApiChapterChapter extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChapterCardChapterCard extends Struct.CollectionTypeSchema {
+  collectionName: 'chapter_cards';
+  info: {
+    singularName: 'chapter-card';
+    pluralName: 'chapter-cards';
+    displayName: 'ChapterCard';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    chapterName: Schema.Attribute.String & Schema.Attribute.Required;
+    chapterNumber: Schema.Attribute.Integer;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chapter-card.chapter-card'
+    >;
+  };
+}
+
 export interface ApiReportReport extends Struct.CollectionTypeSchema {
   collectionName: 'reports';
   info: {
@@ -1077,6 +1107,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::chapter.chapter': ApiChapterChapter;
+      'api::chapter-card.chapter-card': ApiChapterCardChapterCard;
       'api::report.report': ApiReportReport;
       'api::sub-chapter.sub-chapter': ApiSubChapterSubChapter;
       'api::visitor-count.visitor-count': ApiVisitorCountVisitorCount;

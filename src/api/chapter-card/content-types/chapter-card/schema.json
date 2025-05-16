@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapter_cards",
+  "info": {
+    "singularName": "chapter-card",
+    "pluralName": "chapter-cards",
+    "displayName": "ChapterCard"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "chapterName": {
+      "type": "string",
+      "required": true
+    },
+    "chapterNumber": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
