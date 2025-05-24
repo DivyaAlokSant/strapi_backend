@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_content_sankey_charts",
+  "info": {
+    "displayName": "SankeyChart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "dataNodes": {
+      "type": "json",
+      "required": true
+    },
+    "datalinks": {
+      "type": "json"
+    },
+    "footer": {
+      "type": "blocks"
+    }
+  }
+}

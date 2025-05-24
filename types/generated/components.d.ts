@@ -1,5 +1,17 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface ContentTreeChart extends Struct.ComponentSchema {
+  collectionName: 'components_content_tree_charts';
+  info: {
+    displayName: 'TreeChart';
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    data: Schema.Attribute.JSON;
+    footer: Schema.Attribute.Blocks;
+  };
+}
+
 export interface ContentTable extends Struct.ComponentSchema {
   collectionName: 'components_content_tables';
   info: {
@@ -13,6 +25,20 @@ export interface ContentTable extends Struct.ComponentSchema {
     tableFooter: Schema.Attribute.Blocks;
     HighlightLastRow: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<false>;
+  };
+}
+
+export interface ContentSunburstChart extends Struct.ComponentSchema {
+  collectionName: 'components_content_sunburst_charts';
+  info: {
+    displayName: 'SunburstChart';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    data: Schema.Attribute.JSON & Schema.Attribute.Required;
+    width: Schema.Attribute.Integer;
+    height: Schema.Attribute.Integer;
+    footer: Schema.Attribute.Blocks;
   };
 }
 
@@ -30,6 +56,20 @@ export interface ContentStackBarChart extends Struct.ComponentSchema {
     tooltipEnabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     legendEnabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     chartFooter: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ContentSankeyChart extends Struct.ComponentSchema {
+  collectionName: 'components_content_sankey_charts';
+  info: {
+    displayName: 'SankeyChart';
+    description: '';
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    dataNodes: Schema.Attribute.JSON & Schema.Attribute.Required;
+    datalinks: Schema.Attribute.JSON;
+    footer: Schema.Attribute.Blocks;
   };
 }
 
@@ -135,8 +175,11 @@ export interface ContentBarChart extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'content.tree-chart': ContentTreeChart;
       'content.table': ContentTable;
+      'content.sunburst-chart': ContentSunburstChart;
       'content.stack-bar-chart': ContentStackBarChart;
+      'content.sankey-chart': ContentSankeyChart;
       'content.pie-chart': ContentPieChart;
       'content.para-content': ContentParaContent;
       'content.line-chart': ContentLineChart;

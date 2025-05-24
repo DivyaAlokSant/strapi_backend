@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_content_sunburst_charts",
+  "info": {
+    "displayName": "SunburstChart"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "data": {
+      "type": "json",
+      "required": true
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "footer": {
+      "type": "blocks"
+    }
+  }
+}

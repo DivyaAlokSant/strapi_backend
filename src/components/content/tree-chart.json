@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_tree_charts",
+  "info": {
+    "displayName": "TreeChart"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "data": {
+      "type": "json"
+    },
+    "footer": {
+      "type": "blocks"
+    }
+  }
+}

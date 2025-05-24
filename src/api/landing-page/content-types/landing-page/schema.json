@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "LandingPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "text"
+    },
+    "dynamicContent": {
+      "type": "dynamiczone",
+      "components": [
+        "content.tree-chart",
+        "content.table",
+        "content.sunburst-chart",
+        "content.stack-bar-chart",
+        "content.sankey-chart",
+        "content.pie-chart",
+        "content.para-content",
+        "content.line-chart",
+        "content.combo-bar-line-chart",
+        "content.chart-as-image",
+        "content.bar-chart"
+      ]
+    }
+  }
+}
