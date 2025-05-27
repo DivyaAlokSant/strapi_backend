@@ -31,7 +31,8 @@
         "content.line-chart",
         "content.combo-bar-line-chart",
         "content.chart-as-image",
-        "content.bar-chart"
+        "content.bar-chart",
+        "content.tableu-chart"
       ]
     }
   }

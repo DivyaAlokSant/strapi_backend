@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "overview_tabs",
+  "info": {
+    "singularName": "overview-tab",
+    "pluralName": "overview-tabs",
+    "displayName": "OverviewTab",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "dynamicContent": {
+      "type": "dynamiczone",
+      "components": [
+        "content.text-card",
+        "content.chart-as-image",
+        "content.para-content"
+      ]
+    }
+  }
+}

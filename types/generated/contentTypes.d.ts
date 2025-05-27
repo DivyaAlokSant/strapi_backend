@@ -604,6 +604,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'content.combo-bar-line-chart',
         'content.chart-as-image',
         'content.bar-chart',
+        'content.tableu-chart',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -617,6 +618,37 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::landing-page.landing-page'
+    >;
+  };
+}
+
+export interface ApiOverviewTabOverviewTab extends Struct.CollectionTypeSchema {
+  collectionName: 'overview_tabs';
+  info: {
+    singularName: 'overview-tab';
+    pluralName: 'overview-tabs';
+    displayName: 'OverviewTab';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    dynamicContent: Schema.Attribute.DynamicZone<
+      ['content.text-card', 'content.chart-as-image', 'content.para-content']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::overview-tab.overview-tab'
     >;
   };
 }
@@ -1153,6 +1185,7 @@ declare module '@strapi/strapi' {
       'api::chapter.chapter': ApiChapterChapter;
       'api::chapter-card.chapter-card': ApiChapterCardChapterCard;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::overview-tab.overview-tab': ApiOverviewTabOverviewTab;
       'api::report.report': ApiReportReport;
       'api::sub-chapter.sub-chapter': ApiSubChapterSubChapter;
       'api::visitor-count.visitor-count': ApiVisitorCountVisitorCount;

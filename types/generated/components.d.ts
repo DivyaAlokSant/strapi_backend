@@ -12,6 +12,32 @@ export interface ContentTreeChart extends Struct.ComponentSchema {
   };
 }
 
+export interface ContentTextCard extends Struct.ComponentSchema {
+  collectionName: 'components_content_text_cards';
+  info: {
+    displayName: 'TextCard';
+    icon: 'bulletList';
+  };
+  attributes: {
+    Heading: Schema.Attribute.String;
+    detail: Schema.Attribute.Text;
+  };
+}
+
+export interface ContentTableuChart extends Struct.ComponentSchema {
+  collectionName: 'components_content_tableu_charts';
+  info: {
+    displayName: 'tableuChart';
+    icon: 'chartCircle';
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    EmbedCode: Schema.Attribute.Text;
+    height: Schema.Attribute.Integer;
+    width: Schema.Attribute.String;
+  };
+}
+
 export interface ContentTable extends Struct.ComponentSchema {
   collectionName: 'components_content_tables';
   info: {
@@ -176,6 +202,8 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'content.tree-chart': ContentTreeChart;
+      'content.text-card': ContentTextCard;
+      'content.tableu-chart': ContentTableuChart;
       'content.table': ContentTable;
       'content.sunburst-chart': ContentSunburstChart;
       'content.stack-bar-chart': ContentStackBarChart;

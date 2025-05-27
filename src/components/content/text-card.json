@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_text_cards",
+  "info": {
+    "displayName": "TextCard",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "text"
+    }
+  }
+}
