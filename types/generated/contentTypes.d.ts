@@ -577,6 +577,52 @@ export interface ApiChapterCardChapterCard extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFinancesofstatesTabFinancesofstatesTab
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'financesofstates_tabs';
+  info: {
+    singularName: 'financesofstates-tab';
+    pluralName: 'financesofstates-tabs';
+    displayName: 'FinancesofstatesTab';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    dynamicContent: Schema.Attribute.DynamicZone<
+      [
+        'content.tree-chart',
+        'content.text-card',
+        'content.tableu-chart',
+        'content.table',
+        'content.sunburst-chart',
+        'content.stack-bar-chart',
+        'content.sankey-chart',
+        'content.pie-chart',
+        'content.para-content',
+        'content.line-chart',
+        'content.hero-section',
+        'content.combo-bar-line-chart',
+        'content.chart-as-image',
+        'content.bar-chart',
+      ]
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::financesofstates-tab.financesofstates-tab'
+    >;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -605,6 +651,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
         'content.chart-as-image',
         'content.bar-chart',
         'content.tableu-chart',
+        'content.hero-section',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
@@ -1184,6 +1231,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::chapter.chapter': ApiChapterChapter;
       'api::chapter-card.chapter-card': ApiChapterCardChapterCard;
+      'api::financesofstates-tab.financesofstates-tab': ApiFinancesofstatesTabFinancesofstatesTab;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::overview-tab.overview-tab': ApiOverviewTabOverviewTab;
       'api::report.report': ApiReportReport;

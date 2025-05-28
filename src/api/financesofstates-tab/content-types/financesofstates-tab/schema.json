@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "landing_pages",
+  "collectionName": "financesofstates_tabs",
   "info": {
-    "singularName": "landing-page",
-    "pluralName": "landing-pages",
-    "displayName": "LandingPage",
+    "singularName": "financesofstates-tab",
+    "pluralName": "financesofstates-tabs",
+    "displayName": "FinancesofstatesTab",
     "description": ""
   },
   "options": {
@@ -12,16 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
-      "type": "blocks"
-    },
-    "description": {
-      "type": "text"
-    },
     "dynamicContent": {
       "type": "dynamiczone",
       "components": [
         "content.tree-chart",
+        "content.text-card",
+        "content.tableu-chart",
         "content.table",
         "content.sunburst-chart",
         "content.stack-bar-chart",
@@ -29,11 +25,10 @@
         "content.pie-chart",
         "content.para-content",
         "content.line-chart",
+        "content.hero-section",
         "content.combo-bar-line-chart",
         "content.chart-as-image",
-        "content.bar-chart",
-        "content.tableu-chart",
-        "content.hero-section"
+        "content.bar-chart"
       ]
     }
   }

@@ -96,6 +96,7 @@ export interface ContentSankeyChart extends Struct.ComponentSchema {
     dataNodes: Schema.Attribute.JSON & Schema.Attribute.Required;
     datalinks: Schema.Attribute.JSON;
     footer: Schema.Attribute.Blocks;
+    nodeLinks: Schema.Attribute.JSON;
   };
 }
 
@@ -143,6 +144,30 @@ export interface ContentLineChart extends Struct.ComponentSchema {
     LegendEnabled: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     lineColors: Schema.Attribute.JSON;
     chartFooter: Schema.Attribute.Blocks;
+  };
+}
+
+export interface ContentHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_content_hero_sections';
+  info: {
+    displayName: 'HeroSection';
+    icon: 'calendar';
+    description: '';
+  };
+  attributes: {
+    lefticon1: Schema.Attribute.String;
+    lefticon1label: Schema.Attribute.String;
+    lefticon1link: Schema.Attribute.String;
+    centerImage: Schema.Attribute.Media<'images'>;
+    rightIcon1: Schema.Attribute.String;
+    righticon1Label: Schema.Attribute.String;
+    righticon1link: Schema.Attribute.String;
+    righticon2label: Schema.Attribute.String;
+    righticon2Link: Schema.Attribute.String;
+    lefticon2: Schema.Attribute.String;
+    lefticon2label: Schema.Attribute.String;
+    lefticon2link: Schema.Attribute.String;
+    righticon2: Schema.Attribute.String;
   };
 }
 
@@ -211,6 +236,7 @@ declare module '@strapi/strapi' {
       'content.pie-chart': ContentPieChart;
       'content.para-content': ContentParaContent;
       'content.line-chart': ContentLineChart;
+      'content.hero-section': ContentHeroSection;
       'content.combo-bar-line-chart': ContentComboBarLineChart;
       'content.chart-as-image': ContentChartAsImage;
       'content.bar-chart': ContentBarChart;

@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_content_hero_sections",
+  "info": {
+    "displayName": "HeroSection",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "lefticon1": {
+      "type": "string"
+    },
+    "lefticon1label": {
+      "type": "string"
+    },
+    "lefticon1link": {
+      "type": "string"
+    },
+    "centerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "rightIcon1": {
+      "type": "string"
+    },
+    "righticon1Label": {
+      "type": "string"
+    },
+    "righticon1link": {
+      "type": "string"
+    },
+    "righticon2label": {
+      "type": "string"
+    },
+    "righticon2Link": {
+      "type": "string"
+    },
+    "lefticon2": {
+      "type": "string"
+    },
+    "lefticon2label": {
+      "type": "string"
+    },
+    "lefticon2link": {
+      "type": "string"
+    },
+    "righticon2": {
+      "type": "string"
+    }
+  }
+}

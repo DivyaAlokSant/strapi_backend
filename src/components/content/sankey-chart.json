@@ -18,6 +18,9 @@
     },
     "footer": {
       "type": "blocks"
+    },
+    "nodeLinks": {
+      "type": "json"
     }
   }
 }
