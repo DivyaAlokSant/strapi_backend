@@ -29,12 +29,14 @@ export interface ContentTableuChart extends Struct.ComponentSchema {
   info: {
     displayName: 'tableuChart';
     icon: 'chartCircle';
+    description: '';
   };
   attributes: {
     Title: Schema.Attribute.String;
     EmbedCode: Schema.Attribute.Text;
     height: Schema.Attribute.Integer;
     width: Schema.Attribute.String;
+    sectionId: Schema.Attribute.String;
   };
 }
 

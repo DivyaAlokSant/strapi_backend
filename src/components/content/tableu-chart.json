@@ -2,7 +2,8 @@
   "collectionName": "components_content_tableu_charts",
   "info": {
     "displayName": "tableuChart",
-    "icon": "chartCircle"
+    "icon": "chartCircle",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,6 +17,9 @@
       "type": "integer"
     },
     "width": {
+      "type": "string"
+    },
+    "sectionId": {
       "type": "string"
     }
   }
